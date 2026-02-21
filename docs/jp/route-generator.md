@@ -1,8 +1,8 @@
-# Route Generator
+# ルートジェネレーター
 
-Catalog file: `src/catalog/discord.routes.json`
+カタログファイル: `src/catalog/discord.routes.json`
 
-Each entry:
+各エントリ:
 ```json
 {
   "name": "discord.post_message",
@@ -23,14 +23,12 @@ Each entry:
 }
 ```
 
-- `confirm: true` shows a preview; call again with `confirm:false` to execute.
-- Path params like `:channel_id` are required and merged into the request path.
-- For `GET/DELETE` non-path fields become `query`; for others they become `body`.
-- Messages auto-apply `allowed_mentions` from policy unless you override.
+- `confirm: true` はプレビューを表示します。実行するには `confirm:false` で再度呼び出してください。
+- `:channel_id` などのパスパラメータは必須であり、リクエストパスにマージされます。
+- `GET/DELETE` の場合、パス以外のフィールドは `query` になります。それ以外の場合は `body` になります。
+- メッセージは、オーバーライドしない限り、ポリシーから `allowed_mentions` を自動適用します。
 
-Helper tools:
+ヘルパーツール:
 - `discord.search_tools(query)`
 - `discord.help(tool_name)`
 - `discord.tools_index()`
-
-

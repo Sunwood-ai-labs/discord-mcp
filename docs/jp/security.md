@@ -1,10 +1,8 @@
-# Security Model
+# セキュリティモデル
 
-- **Least privilege:** restrict bot permissions & intents.
-- **Allow-lists:** `ALLOW_GUILD_IDS`/`ALLOW_CHANNEL_IDS` enforced server-side.
-- **Human-in-the-loop:** destructive/high-impact tools have `confirm=true`.
-- **Mentions sanitized:** default allowed mentions is `none`.
-- **Webhook tokens:** creation redacts tokens; execution requires explicit token.
-- **Audit & logs:** log tool inputs/outputs server-side (add persistence as needed).
-
-
+- **最小権限:** Botの権限とインテントを制限します。
+- **許可リスト:** `ALLOW_GUILD_IDS`/`ALLOW_CHANNEL_IDS` はサーバー側で適用されます。
+- **ヒューマンインザループ（Human-in-the-loop）:** 破壊的/影響が大きいツールには `confirm=true` が設定されています。
+- **メンションのサニタイズ:** デフォルトで許可されるメンションは `none` です。
+- **Webhook トークン:** 作成時にトークンは編集（マスキング）されます。実行には明示的なトークンが必要です。
+- **監査とログ:** ツールの入出力をサーバー側でログ記録します（必要に応じて永続性を追加します）。

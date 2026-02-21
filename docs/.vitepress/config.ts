@@ -13,29 +13,29 @@ export default defineConfig({
     root: {
       label: 'English',
       lang: 'en',
-      link: '/en/',
+      link: '/',
       themeConfig: {
         nav: [
-          { text: 'Home', link: '/en/' },
-          { text: 'Guide', link: '/en/guide/' },
-          { text: 'API Reference', link: '/en/api/' },
+          { text: 'Home', link: '/' },
+          { text: 'Guide', link: '/guide/' },
+          { text: 'API Reference', link: '/api/' },
           { text: 'GitHub', link: 'https://github.com/bennettschwartz/discord-mcp' }
         ],
         sidebar: [
           {
             text: 'Introduction',
             items: [
-              { text: 'Getting Started', link: '/en/' },
-              { text: 'Configuration', link: '/en/configuration' },
-              { text: 'Examples', link: '/en/examples' }
+              { text: 'Getting Started', link: '/' },
+              { text: 'Configuration', link: '/configuration' },
+              { text: 'Examples', link: '/examples' }
             ]
           },
           {
             text: 'Features',
             items: [
-              { text: 'Route Generator', link: '/en/route-generator' },
-              { text: 'Gateway Events', link: '/en/gateway' },
-              { text: 'Tool Packs', link: '/en/packs' }
+              { text: 'Route Generator', link: '/route-generator' },
+              { text: 'Gateway Events', link: '/gateway' },
+              { text: 'Tool Packs', link: '/packs' }
             ]
           }
         ]

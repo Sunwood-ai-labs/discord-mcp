@@ -1,19 +1,16 @@
-# Packs
+# パック
 
-- `CORE`  Emessages, reactions, pins, basic threads, typing
-- `ADMIN`  Eroles, members, bans, audit log, automod, guild modify
-- `MEDIA`  Eemojis, stickers, attachments
-- `COMMUNITY`  Einvites, scheduled events, stage instances, news follow, threads
-- `DEVTOOLS`  Ewebhooks, commands, current user/app, voice regions
+- `CORE` — メッセージ、リアクショ​​ン、ピン留め、基本的なスレッド、タイピング
+- `ADMIN` — ロール、メンバー、BAN、監査ログ、自動モデレーション、ギルド変更
+- `MEDIA` — 絵文字、ステッカー、添付ファイル
+- `COMMUNITY` — 招待、イベントのスケジュール、ステージインスタンス、ニュースのフォロー、スレッド
+- `DEVTOOLS` — Webhook、コマンド、現在のユーザー/アプリ、音声リージョン
 
-Enable by setting an env var to any non-empty value.
+任意の空でない値を環境変数に設定することで有効になります。
 
+## 追加パック
 
-## Extra packs
+- `EXPERIMENTAL` — ドキュメント化されていない、または不安定なエンドポイント（例: *サウンドボード*）。デフォルトでは無効です。
+- `OAUTH_ONLY` — ユーザーの **OAuth Bearer** トークンを必要とするエンドポイント（例: コマンド権限V2）。Botトークンでは使用できません。デフォルトではオフです。
 
-- `EXPERIMENTAL`  EUndocumented or unstable endpoints (e.g., *soundboard*). Disabled by default.
-- `OAUTH_ONLY`  EEndpoints that require a user **OAuth bearer** token (e.g., command permissions V2). Not usable with bot tokens; left off by default.
-
-Enable by setting the env var to any non-empty value.
-
-
+環境変数に空欄以外の値を設定すると有効になります。

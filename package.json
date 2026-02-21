@@ -1,6 +1,6 @@
 {
   "name": "@sunwood-ai-labs/discord-mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "Discord MCP server: route-generated tools + Gateway events for Model Context Protocol clients.",
   "publishConfig": {

@@ -1,12 +1,10 @@
-# Gateway Events
+# ゲートウェイイベント
 
-Uses `@discordjs/ws`. Set intents with `GATEWAY_INTENTS`. Defaults to Guilds|GuildMessages.
+`@discordjs/ws` を使用します。`GATEWAY_INTENTS` でインテントを設定します。デフォルトは Guilds|GuildMessages です。
 
-Tools:
+ツール:
 - `discord.gateway_subscribe(event_types?, guild_ids?, channel_ids?)`
 - `discord.gateway_get_events(max=50)`
 - `discord.gateway_info()`
 
-Pattern: subscribe filters ↁEpoll `gateway_get_events`.
-
-
+パターン: フィルターを購読する → `gateway_get_events` でポーリングする。
