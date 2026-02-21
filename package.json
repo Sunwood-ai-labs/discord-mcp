@@ -1,9 +1,16 @@
 {
-  "name": "discord-mcp",
+  "name": "@sunwood-ai-labs/discord-mcp",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
   "description": "Discord MCP server: route-generated tools + Gateway events for Model Context Protocol clients.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunwood-ai-labs/discord-mcp.git"
+  },
+  "homepage": "https://github.com/Sunwood-ai-labs/discord-mcp#readme",
   "license": "MIT",
   "bin": {
     "mcp-discord-server": "dist/index.js"
