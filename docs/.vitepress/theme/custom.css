@@ -1,79 +1,136 @@
 /**
- * Custom Discord-inspired theme for VitePress
+ * Material Design 3 (M3) Inspired Theme for VitePress
+ * Using Tonal Palettes and Elevation through color overlays.
  */
 
 :root {
-    /* Discord Signature Colors */
-    --vp-c-brand: #5865F2;
-    /* Discord Blurple */
-    --vp-c-brand-light: #7289da;
-    --vp-c-brand-lighter: #99aab5;
-    --vp-c-brand-dark: #4752c4;
-    --vp-c-brand-darker: #3c45a5;
+    /* MD3 Light Theme Tonal Palette (Based on Discord Blurple #5865F2) */
+    --md-sys-color-primary: #3f51b5;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-primary-container: #e0e0ff;
+    --md-sys-color-on-primary-container: #00006e;
 
-    /* Backgrounds */
-    --vp-c-bg: #313338;
-    /* Discord dark background */
-    --vp-c-bg-alt: #2b2d31;
-    --vp-c-bg-soft: #232428;
+    --md-sys-color-secondary: #5a5d72;
+    --md-sys-color-on-secondary: #ffffff;
 
-    /* Borders & Dividers */
-    --vp-c-divider: #3f4147;
-    --vp-c-border: #3f4147;
+    --md-sys-color-surface: #fefbff;
+    --md-sys-color-on-surface: #1b1b1f;
+    --md-sys-color-surface-variant: #e1e2ec;
+    --md-sys-color-on-surface-variant: #44464f;
 
-    /* Text Colors */
-    --vp-c-text-1: #f2f3f5;
-    --vp-c-text-2: #b5bac1;
-    --vp-c-text-3: #949ba4;
+    --md-sys-color-outline: #757780;
 
-    /* Hero Section Special */
-    --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: linear-gradient(135deg, #5865F2 0%, #eb459e 100%);
+    /* VitePress Overrides - Light */
+    --vp-c-brand: var(--md-sys-color-primary);
+    --vp-c-brand-light: #5c6bc0;
+    --vp-c-brand-dark: #303f9f;
 
-    /* Feature Cards */
-    --vp-custom-block-details-bg: #2b2d31;
+    --vp-c-bg: var(--md-sys-color-surface);
+    --vp-c-bg-alt: #f4f4fa;
+    --vp-c-bg-soft: var(--md-sys-color-surface-variant);
+
+    --vp-c-text-1: var(--md-sys-color-on-surface);
+    --vp-c-text-2: var(--md-sys-color-on-surface-variant);
+    --vp-c-text-3: var(--md-sys-color-outline);
+
+    --vp-c-divider: var(--md-sys-color-outline);
+    --vp-c-gutter: var(--md-sys-color-surface-variant);
 }
 
-/* Glassmorphism effects */
+.dark {
+    /* MD3 Dark Theme Tonal Palette */
+    --md-sys-color-primary: #bec2ff;
+    --md-sys-color-on-primary: #0000ac;
+    --md-sys-color-primary-container: #22389c;
+    --md-sys-color-on-primary-container: #e0e0ff;
+
+    --md-sys-color-surface: #1b1b1f;
+    --md-sys-color-on-surface: #e4e1e6;
+    --md-sys-color-surface-variant: #44464f;
+    --md-sys-color-on-surface-variant: #c5c6d0;
+
+    --md-sys-color-outline: #8f909a;
+
+    /* VitePress Overrides - Dark */
+    --vp-c-brand: var(--md-sys-color-primary);
+    --vp-c-bg: var(--md-sys-color-surface);
+    --vp-c-bg-alt: #16161a;
+    --vp-c-bg-soft: #232429;
+
+    --vp-c-text-1: var(--md-sys-color-on-surface);
+    --vp-c-text-2: var(--md-sys-color-on-surface-variant);
+    --vp-c-text-3: var(--md-sys-color-outline);
+
+    --vp-c-divider: #303036;
+}
+
+/* --- UI Component Refining --- */
+
+/* App-wide Typography */
+body {
+    font-family: 'Roboto', 'Inter', 'Noto Sans JP', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navigation Bar */
 .VPNavBar {
-    background-color: rgba(43, 45, 49, 0.8) !important;
-    backdrop-filter: blur(10px);
+    background-color: var(--vp-c-bg) !important;
+    border-bottom: 1px solid var(--vp-c-divider) !important;
+    transition: background-color 0.3s ease;
 }
 
+/* Sidebar */
+.VPSidebar {
+    background-color: var(--vp-c-bg-alt) !important;
+    border-right: 1px solid var(--vp-c-divider) !important;
+}
+
+.VPSidebarItem.active>.item>.text {
+    color: var(--md-sys-color-primary) !important;
+    font-weight: 700 !important;
+}
+
+/* Feature Cards (MD3 Card Style) */
 .VPFeature {
-    background-color: #2b2d31 !important;
-    border: 1px solid #3f4147 !important;
-    transition: all 0.3s ease;
+    background-color: var(--vp-c-bg-alt) !important;
+    border: 1px solid transparent !important;
+    border-radius: 16px !important;
+    /* MD3 Rounded corners */
+    padding: 24px !important;
+    transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
 
 .VPFeature:hover {
-    border-color: #5865F2 !important;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    background-color: var(--vp-c-bg-soft) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 
-/* Hero Button Customization */
+/* Buttons (MD3 Filled & Outlined) */
 .VPButton.brand {
-    border-color: #5865F2 !important;
-    background-color: #5865F2 !important;
-    font-weight: 600;
-    transition: filter 0.2s ease;
+    border-radius: 100px !important;
+    /* MD3 Full rounded buttons */
+    background-color: var(--md-sys-color-primary) !important;
+    color: var(--md-sys-color-on-primary) !important;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.VPButton.brand:hover {
-    filter: brightness(1.1);
+.VPButton.alt {
+    border-radius: 100px !important;
+    border: 1px solid var(--md-sys-color-outline) !important;
+    background-color: transparent !important;
 }
 
-/* Typography Enhancements */
-body {
-    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+/* Code Blocks */
+.vp-doc div[class*='language-'] {
+    border-radius: 12px !important;
+    margin: 16px 0 !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    letter-spacing: -0.02em;
+/* Hero Section */
+.VPHero .name {
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, #eb459e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
