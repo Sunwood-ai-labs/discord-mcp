@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Discord MCP',
   description: 'Powerful Discord integration for AI agents via Model Context Protocol',
-  base: '/',
+  base: '/discord-mcp/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#5865F2' }]
