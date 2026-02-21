@@ -7,4 +7,6 @@ Tools:
 - `discord.gateway_get_events(max=50)`
 - `discord.gateway_info()`
 
-Pattern: subscribe filters → poll `gateway_get_events`.
+Pattern: subscribe filters ↁEpoll `gateway_get_events`.
+
+

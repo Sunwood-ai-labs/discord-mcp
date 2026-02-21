@@ -85,3 +85,4 @@ For detailed parameter information for each tool, use the `discord.help` tool:
 ```
 discord.help({ tool_name: "discord.post_message" })
 ```
+

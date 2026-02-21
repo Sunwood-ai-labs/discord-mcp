@@ -8,3 +8,5 @@ Yes—append entries to the catalog. Keep dangerous ones behind `confirm` and pa
 
 **How do I add file uploads?**  
 Use the `post_message_files` tool for base64 attachments, or add a route entry and handle `files` in a custom tool if needed.
+
+

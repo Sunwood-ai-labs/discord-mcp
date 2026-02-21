@@ -32,3 +32,5 @@ Helper tools:
 - `discord.search_tools(query)`
 - `discord.help(tool_name)`
 - `discord.tools_index()`
+
+

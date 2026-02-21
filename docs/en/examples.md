@@ -31,7 +31,7 @@
 ```
 *(Store the token securely)*
 ```json
-{ "tool": "discord.webhook_execute", "input": { "webhook_id": "999", "token": "xxxxx", "content": "Deployed ✅" } }
+{ "tool": "discord.webhook_execute", "input": { "webhook_id": "999", "token": "xxxxx", "content": "Deployed ✁E } }
 ```
 
 ## Gateway: subscribe and fetch events
@@ -141,3 +141,5 @@
 ```json
 { "tool": "discord.get_role_connections_metadata", "input": { "application_id": "app_123" } }
 ```
+
+

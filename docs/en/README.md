@@ -40,3 +40,4 @@ The documentation is automatically deployed to GitHub Pages when changes are pus
 - `/docs/.vitepress/` - VitePress configuration and theme
 - `/docs/guide/` - Getting started guides
 - `/docs/api/` - API reference documentation
+

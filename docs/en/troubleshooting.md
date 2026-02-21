@@ -12,3 +12,5 @@
 
 **Gateway missing events**
 - Check `GATEWAY_INTENTS`. Ensure filters in `gateway_subscribe` are correct.
+
+
