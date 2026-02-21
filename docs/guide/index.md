@@ -38,7 +38,7 @@ Edit `.env` with your Discord bot token:
 DISCORD_BOT_TOKEN=your_bot_token_here
 ```
 
-For more detailed configuration options, see the [Configuration Guide](/en/configuration).
+For more detailed configuration options, see the [Configuration Guide](/configuration).
 
 ## Running the Server
 
@@ -54,8 +54,8 @@ npm start
 
 ## Next Steps
 
-- Learn about [Tool Packs](/en/packs) to enable additional features
-- Explore [Examples](/en/examples) of common use cases
-- Understand the [Security Model](/en/security) for safe operation
-- Set up [Gateway Events](/en/gateway) for real-time Discord data
+- Learn about [Tool Packs](/packs) to enable additional features
+- Explore [Examples](/examples) of common use cases
+- Understand the [Security Model](/security) for safe operation
+- Set up [Gateway Events](/gateway) for real-time Discord data
 
