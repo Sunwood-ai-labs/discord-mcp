@@ -46,7 +46,7 @@ export function executeWebhookTool(dc: DiscordClient): ToolHandler {
     username: z.string().optional(),
     avatar_url: z.string().url().optional(),
     tts: z.boolean().optional(),
-    embeds: z.array(z.any()).optional().describe('Array of embed objects')
+    embeds: z.array(z.record(z.any())).optional().describe('Array of embed objects')
   });
   return {
     name: 'discord_webhook_execute',
@@ -55,12 +55,12 @@ export function executeWebhookTool(dc: DiscordClient): ToolHandler {
     async *handler({ input }) {
       const validated = input as z.infer<typeof input>;
       const { webhook_id, token, content, username, avatar_url, tts, embeds } = validated;
-      
+
       // Validate that either content or embeds is provided
       if (!content && (!embeds || embeds.length === 0)) {
         throw new Error('Either content or embeds is required');
       }
-      
+
       // Parse embeds if they're provided as strings
       let parsedEmbeds = embeds;
       if (embeds && typeof embeds === 'string') {
@@ -70,12 +70,12 @@ export function executeWebhookTool(dc: DiscordClient): ToolHandler {
           throw new Error('Invalid embeds JSON format');
         }
       }
-      
+
       const webhookData: any = { content, username, avatar_url, tts };
       if (parsedEmbeds && Array.isArray(parsedEmbeds)) {
         webhookData.embeds = parsedEmbeds;
       }
-      
+
       const msg = await dc.executeWebhook(webhook_id, token, webhookData);
       yield { content: [{ type: 'text', text: JSON.stringify(msg) }] };
     }

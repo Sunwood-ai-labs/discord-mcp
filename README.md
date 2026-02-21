@@ -1,5 +1,7 @@
 # Discord MCP Server
 
+> **Note**: This is a modified version of the Discord MCP server. The original repository is [GustyCube/discord-mcp](https://github.com/GustyCube/discord-mcp).
+
 A **Model Context Protocol** server that provides AI agents with secure access to Discord's REST API and Gateway events.
 
 <a href="https://glama.ai/mcp/servers/@GustyCube/discord-mcp">

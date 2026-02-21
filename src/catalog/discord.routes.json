@@ -728,19 +728,29 @@
           "type": "integer"
         },
         "trigger_metadata": {
-          "type": "object"
+          "type": "object",
+          "additionalProperties": true
         },
         "actions": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         "enabled": {
           "type": "boolean"
         },
         "exempt_roles": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         "exempt_channels": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -778,19 +788,29 @@
           "type": "integer"
         },
         "trigger_metadata": {
-          "type": "object"
+          "type": "object",
+          "additionalProperties": true
         },
         "actions": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         "enabled": {
           "type": "boolean"
         },
         "exempt_roles": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         "exempt_channels": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -1372,7 +1392,10 @@
           "type": "string"
         },
         "roles": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         "mute": {
           "type": "boolean"
@@ -1439,7 +1462,10 @@
           "maximum": 30
         },
         "include_roles": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         "compute_prune_count": {
           "type": "boolean"
@@ -1509,7 +1535,10 @@
           "type": "string"
         },
         "positions": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -1567,7 +1596,10 @@
           "type": "string"
         },
         "roles": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -2141,10 +2173,14 @@
           "type": "string"
         },
         "message": {
-          "type": "object"
+          "type": "object",
+          "additionalProperties": true
         },
         "applied_tags": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -2338,13 +2374,19 @@
           "type": "string"
         },
         "default_channel_ids": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         "enabled": {
           "type": "boolean"
         },
         "prompts": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         "mode": {
           "type": "integer"
@@ -2372,7 +2414,10 @@
           "type": "string"
         },
         "available_tags": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -2899,7 +2944,10 @@
           "type": "string"
         },
         "metadata": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -2999,7 +3047,10 @@
           "type": "string"
         },
         "commands": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -3028,7 +3079,10 @@
           "type": "string"
         },
         "commands": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -3136,7 +3190,10 @@
           "type": "boolean"
         },
         "welcome_channels": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         },
         "description": {
           "type": "string"
@@ -3164,7 +3221,10 @@
           "type": "string"
         },
         "positions": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
@@ -3310,7 +3370,7 @@
     ],
     "method": "POST",
     "path": "/channels/:channel_id/messages/bulk-delete",
-    "description": "Bulk delete 2\u2013100 messages (cannot delete messages older than 14 days).",
+    "description": "Bulk delete 2–100 messages (cannot delete messages older than 14 days).",
     "pack": "CORE",
     "confirm": false,
     "schema": {
@@ -3320,7 +3380,10 @@
           "type": "string"
         },
         "messages": {
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "required": [
