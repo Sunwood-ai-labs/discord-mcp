@@ -1,0 +1,79 @@
+/**
+ * Custom Discord-inspired theme for VitePress
+ */
+
+:root {
+    /* Discord Signature Colors */
+    --vp-c-brand: #5865F2;
+    /* Discord Blurple */
+    --vp-c-brand-light: #7289da;
+    --vp-c-brand-lighter: #99aab5;
+    --vp-c-brand-dark: #4752c4;
+    --vp-c-brand-darker: #3c45a5;
+
+    /* Backgrounds */
+    --vp-c-bg: #313338;
+    /* Discord dark background */
+    --vp-c-bg-alt: #2b2d31;
+    --vp-c-bg-soft: #232428;
+
+    /* Borders & Dividers */
+    --vp-c-divider: #3f4147;
+    --vp-c-border: #3f4147;
+
+    /* Text Colors */
+    --vp-c-text-1: #f2f3f5;
+    --vp-c-text-2: #b5bac1;
+    --vp-c-text-3: #949ba4;
+
+    /* Hero Section Special */
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(135deg, #5865F2 0%, #eb459e 100%);
+
+    /* Feature Cards */
+    --vp-custom-block-details-bg: #2b2d31;
+}
+
+/* Glassmorphism effects */
+.VPNavBar {
+    background-color: rgba(43, 45, 49, 0.8) !important;
+    backdrop-filter: blur(10px);
+}
+
+.VPFeature {
+    background-color: #2b2d31 !important;
+    border: 1px solid #3f4147 !important;
+    transition: all 0.3s ease;
+}
+
+.VPFeature:hover {
+    border-color: #5865F2 !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Button Customization */
+.VPButton.brand {
+    border-color: #5865F2 !important;
+    background-color: #5865F2 !important;
+    font-weight: 600;
+    transition: filter 0.2s ease;
+}
+
+.VPButton.brand:hover {
+    filter: brightness(1.1);
+}
+
+/* Typography Enhancements */
+body {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -0.02em;
+}

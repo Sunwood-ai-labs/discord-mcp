@@ -2,30 +2,33 @@
 layout: home
 
 hero:
-  name: Discord MCP
-  text: Model Context Protocol for Discord
-  tagline: Safe, declarative Discord API access through MCP tools
+  name: "Discord MCP"
+  text: "Power Your AI with Discord"
+  tagline: "The bridge between LLMs and Discord API. Safe, modular, and declarative."
   actions:
     - theme: brand
-      text: Get Started
+      text: "🚀 Get Started"
       link: /configuration
     - theme: alt
-      text: View on GitHub
+      text: "📂 View Examples"
+      link: /examples
+    - theme: alt
+      text: "⭐ GitHub"
       link: https://github.com/bennettschwartz/discord-mcp
 
 features:
-  - icon: 🚀
-    title: Route Generator
-    details: Declarative catalog automatically generates tools with names, descriptions, and JSON schemas from Discord API routes
-  - icon: 🔌
-    title: Gateway Events
-    details: Real-time Discord events with queue management and filtering capabilities
+  - icon: 🛠️
+    title: "Dynamic Route Generation"
+    details: "Automatically syncs with Discord API routes to provide up-to-date tools."
+  - icon: 📡
+    title: "Real-time Gateway"
+    details: "React to Discord events instantly with optimized event streaming."
   - icon: 🔒
-    title: Built-in Safety
-    details: Guild/channel allow-lists, human-in-the-loop confirmations, and safe mention defaults
-  - icon: 📦
-    title: Modular Packs
-    details: Enable only the features you need - CORE, ADMIN, MEDIA, COMMUNITY, and DEVTOOLS packs
+    title: "Enterprise Grade Safety"
+    details: "Granular permissions and Human-in-the-loop verification built-in."
+  - icon: 🧩
+    title: "Modular Architecture"
+    details: "Scale your agent with functional packs: Admin, Media, and more."
 ---
 
 ## Quick Start
